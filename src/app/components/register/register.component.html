@@ -1,0 +1,11 @@
+<div>
+  <h2>Register</h2>
+  <input type="text" placeholder="Username" [(ngModel)]="username">
+  <input type="password" placeholder="Password" [(ngModel)]="password">
+  <select [(ngModel)]="role">
+    <option value="employee">Employee</option>
+    <option value="manager">Manager</option>
+  </select>
+  <button (click)="register()">Register</button>
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</div>

@@ -1,0 +1,30 @@
+<form [formGroup]="leaveForm" (ngSubmit)="applyLeave()">
+   
+    
+    <label>Start Date:</label>
+    <input type="date" formControlName="startDate">
+    
+    <label>End Date:</label>
+    <input type="date" formControlName="endDate">
+    
+    <label>Reason:</label>
+    <textarea formControlName="reason"></textarea>
+    
+    <button type="submit" [disabled]="leaveForm.invalid">Apply Leave</button>
+  </form>
+  <table>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Reason</th>
+      <th>Status</th>
+    </tr>
+    <tr *ngFor="let request of leaveRequests">
+      <td>{{ request.startDate | date }}</td>
+      <td>{{ request.endDate | date }}</td>
+      <td>{{ request.reason }}</td>
+      <td>{{ request.status }}</td>
+      
+    </tr>
+  </table>
+  <button (click)="logout()">LOGOUT</button>
