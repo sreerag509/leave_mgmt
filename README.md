@@ -31,4 +31,3 @@
 - ✅ Fix bugs and refine UI/UX.
 - ✅ Deploy the application (Firebase, AWS, or custom server).
 
-Would you like me to adjust the timeline based on any specific constraints or add more details to any section? 🚀
